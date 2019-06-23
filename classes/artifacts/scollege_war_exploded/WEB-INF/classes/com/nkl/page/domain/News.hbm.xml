@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.nkl.page.domain.News" table="news">
+		<id name="news_id" type="java.lang.Integer">
+			<column name="news_id" />
+			<generator class="native" />
+		</id>
+		<property name="user_id" type="java.lang.Integer">
+			<column name="user_id"  />
+		</property>
+		<property name="news_title" type="java.lang.String">
+			<column name="news_title"  length="225" />
+		</property>
+		<property name="news_content" type="java.lang.String">
+			<column name="news_content"  length="65535" />
+		</property>
+		<property name="news_picture" type="java.lang.String">
+			<column name="news_picture"  length="225" />
+		</property>
+		<property name="news_date" type="java.lang.String">
+			<column name="news_date"  length="50" />
+		</property>
+		<property name="news_type" type="java.lang.Integer">
+			<column name="news_type"  />
+		</property>
+		<property name="news_flag" type="java.lang.Integer">
+			<column name="news_flag"  />
+		</property>
+	</class>
+</hibernate-mapping>

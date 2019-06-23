@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.nkl.page.domain.Member" table="member">
+		<id name="member_id" type="java.lang.Integer">
+			<column name="member_id" />
+			<generator class="native" />
+		</id>
+		<many-to-one name="college" class="com.nkl.page.domain.College" fetch="select">
+			<column name="college_id"  />
+		</many-to-one>
+		<many-to-one name="user" class="com.nkl.page.domain.User" fetch="select">
+			<column name="user_id"  />
+		</many-to-one>
+		<property name="reg_date" type="java.lang.String">
+			<column name="reg_date"  length="50" />
+		</property>
+		<property name="member_reason" type="java.lang.String">
+			<column name="member_reason"  length="300" />
+		</property>
+		<property name="member_hobby" type="java.lang.String">
+			<column name="member_hobby"  length="300" />
+		</property>
+		<property name="member_flag" type="java.lang.Integer">
+			<column name="member_flag"  />
+		</property>
+	</class>
+</hibernate-mapping>

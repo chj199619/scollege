@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.nkl.page.domain.User" table="user">
+		<id name="user_id" type="java.lang.Integer">
+			<column name="user_id" />
+			<generator class="native" />
+		</id>
+		<property name="user_name" type="java.lang.String">
+			<column name="user_name"  length="50" />
+		</property>
+		<property name="user_pass" type="java.lang.String">
+			<column name="user_pass"  length="200" />
+		</property>
+		<property name="user_mail" type="java.lang.String">
+			<column name="user_mail"  length="50" />
+		</property>
+		<property name="nick_name" type="java.lang.String">
+			<column name="nick_name"  length="50" />
+		</property>
+		<property name="real_name" type="java.lang.String">
+			<column name="real_name"  length="50" />
+		</property>
+		<property name="user_sex" type="java.lang.Integer">
+			<column name="user_sex"  />
+		</property>
+		<property name="user_age" type="java.lang.Integer">
+			<column name="user_age"  />
+		</property>
+		<property name="user_dept" type="java.lang.String">
+			<column name="user_dept"  length="200" />
+		</property>
+		<property name="reg_date" type="java.lang.String">
+			<column name="reg_date"  length="50" />
+		</property>
+		<property name="user_type" type="java.lang.Integer">
+			<column name="user_type"  />
+		</property>
+	</class>
+</hibernate-mapping>

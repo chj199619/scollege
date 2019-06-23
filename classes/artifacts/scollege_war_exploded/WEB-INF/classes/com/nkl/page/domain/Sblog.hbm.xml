@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.nkl.page.domain.Sblog" table="sblog">
+		<id name="sblog_id" type="java.lang.Integer">
+			<column name="sblog_id" />
+			<generator class="native" />
+		</id>
+		<many-to-one name="user" class="com.nkl.page.domain.User" fetch="select">
+			<column name="user_id"  />
+		</many-to-one>
+		<property name="sblog_title" type="java.lang.String">
+			<column name="sblog_title"  length="225" />
+		</property>
+		<property name="sblog_content" type="java.lang.String">
+			<column name="sblog_content"  length="65535" />
+		</property>
+		<property name="sblog_date" type="java.lang.String">
+			<column name="sblog_date"  length="50" />
+		</property>
+		<property name="sblog_click" type="java.lang.Integer">
+			<column name="sblog_click"  />
+		</property>
+		<property name="sblog_pic" type="java.lang.String">
+			<column name="sblog_pic"  length="225" />
+		</property>
+		<property name="sblog_flag" type="java.lang.Integer">
+			<column name="sblog_flag"  />
+		</property>
+	</class>
+</hibernate-mapping>

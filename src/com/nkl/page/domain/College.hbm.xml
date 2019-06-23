@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.nkl.page.domain.College" table="college">
+		<id name="college_id" type="java.lang.Integer">
+			<column name="college_id" />
+			<generator class="native" />
+		</id>
+		<property name="college_name" type="java.lang.String">
+			<column name="college_name"  length="50" />
+		</property>
+		<property name="college_type" type="java.lang.String">
+			<column name="college_type"  length="50" />
+		</property>
+		<many-to-one name="user" class="com.nkl.page.domain.User" fetch="select">
+			<column name="user_id"  />
+		</many-to-one>
+		<property name="create_date" type="java.lang.String">
+			<column name="create_date"  length="50" />
+		</property>
+		<property name="college_persons" type="java.lang.Integer">
+			<column name="college_persons"  />
+		</property>
+		<property name="college_money" type="java.lang.Double">
+			<column name="college_money"  precision="22" scale="0" />
+		</property>
+		<property name="college_pic" type="java.lang.String">
+			<column name="college_pic"  length="225" />
+		</property>
+		<property name="college_note" type="java.lang.String">
+			<column name="college_note"  length="65535" />
+		</property>
+		<property name="college_plan" type="java.lang.String">
+			<column name="college_plan"  length="65535" />
+		</property>
+		<property name="college_flag" type="java.lang.Integer">
+			<column name="college_flag"  />
+		</property>
+	</class>
+</hibernate-mapping>

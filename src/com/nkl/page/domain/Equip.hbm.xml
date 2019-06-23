@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.nkl.page.domain.Equip" table="equip">
+		<id name="equip_id" type="java.lang.Integer">
+			<column name="equip_id" />
+			<generator class="native" />
+		</id>
+		<property name="equip_name" type="java.lang.String">
+			<column name="equip_name"  length="225" />
+		</property>
+		<property name="equip_note" type="java.lang.String">
+			<column name="equip_note"  length="65535" />
+		</property>
+	</class>
+</hibernate-mapping>
